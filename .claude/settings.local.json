@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk grep *)",
+      "Bash(python3 -c \"import torch; data = torch.load\\('/data/sda/LLMG/FLAG/Reddit/reddit2.pt'\\) if '/data/sda/LLMG/FLAG/Reddit/reddit2.pt' else None; print\\('Data not found'\\)\")",
+      "Bash(rtk ls *)",
+      "Bash(rtk wc *)",
+      "Bash(rtk read *)",
+      "Bash(awk -F',' '{print $11}')",
+      "Bash(awk -F',' 'NR>1 {print $11}' /data/sda/LLMG/FLAG/dataset/final_labeled_fake_reviews_unix.csv)",
+      "Bash(awk -F',' 'NR>1 {print $7}' /data/sda/LLMG/FLAG/dataset/final_labeled_fake_reviews_unix.csv)",
+      "Bash(python3)",
+      "Bash(python3 preprocess_graph.py)",
+      "Bash(/home/cy/miniconda3/bin/python preprocess_graph.py)",
+      "Bash(/home/cy/miniconda3/envs/intent/bin/python preprocess_graph.py)",
+      "Bash(/home/cy/miniconda3/envs/intent/bin/python -c \"import torch; import torch_geometric; print\\('torch:', torch.__version__\\); print\\('pyg:', torch_geometric.__version__\\)\")",
+      "Bash(python train.py --help)",
+      "Bash(/home/cy/miniconda3/envs/intent/bin/python generate_semantic_subgraphs.py)",
+      "Bash(rtk git *)",
+      "Bash(/home/cy/miniconda3/envs/intent/bin/python generate_llm_texts.py)",
+      "Skill(deep-research)",
+      "Bash(pdftotext '/data/sda/LLMG/论证活页.pdf' -)",
+      "Bash(python -c 'import sys; text=sys.stdin.read\\(\\); print\\(text[:20000]\\)')",
+      "Workflow(deep-research)",
+      "WebSearch",
+      "Bash(rtk proxy *)",
+      "WebFetch(domain:link.springer.com)",
+      "WebFetch(domain:www.cs.cornell.edu)",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:nbr.nankai.edu.cn)",
+      "WebFetch(domain:ideas.repec.org)",
+      "WebFetch(domain:www.cs.uic.edu)",
+      "WebFetch(domain:www.social.uestc.edu.cn)",
+      "WebFetch(domain:journals.sagepub.com)",
+      "WebFetch(domain:www.sciencedirect.com)",
+      "WebFetch(domain:www.cambridge.org)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "WebFetch(domain:dblp.org)",
+      "WebFetch(domain:doi.org)",
+      "WebFetch(domain:dl.acm.org)"
+    ]
+  }
+}
